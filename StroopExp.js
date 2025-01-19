@@ -121,7 +121,7 @@ async function experimentInit() {
   instrText = new visual.TextStim({
     win: psychoJS.window,
     name: 'instrText',
-    text: 'Hello, thank you for your participation! \n\nIn this experiment, you will see different words with colors. Your task is to ignore the word and press the key for the colour of the letters:\n\nFor the color red = press "r"\nFor the color green = press "g"\nFor the color blue = press "b"\n\n"Press >SPACE< to start the experiment"',
+    text: 'Hello, welcome to this experiment! \n\nYou will see different words with colors. Your task is to:\n- ignore the meaning of the word\n- press the key for the colour of the letters:\n\nFor the color red = press "r"\nFor the color green = press "g"\nFor the color blue = press "b"\n\n"Press >SPACE< to start the experiment"',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -407,7 +407,7 @@ function trialRoutineEachFrame() {
     // update/draw components on each frame
     
     // *target* updates
-    if (t >= 0 && target.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.1 && target.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       target.tStart = t;  // (not accounting for frame time here)
       target.frameNStart = frameN;  // exact frame index
@@ -415,7 +415,7 @@ function trialRoutineEachFrame() {
       target.setAutoDraw(true);
     }
     
-    frameRemains = 0 + 0.5 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
+    frameRemains = 0.1 + 3 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (target.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       target.setAutoDraw(false);
     }
