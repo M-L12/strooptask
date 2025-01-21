@@ -121,7 +121,7 @@ async function experimentInit() {
   instrText = new visual.TextStim({
     win: psychoJS.window,
     name: 'instrText',
-    text: 'Hello, welcome to this experiment! \n\nYou will see different words with colors. Your task is to:\n- ignore the meaning of the word\n- press the key for the colour of the letters:\n\nFor the color red = press "r"\nFor the color green = press "g"\nFor the color blue = press "b"\n\n"Press >SPACE< to start the experiment"',
+    text: 'Hello, welcome to this experiment! \n\nYou will see different words with colors. Your task is to:\n- IGNORE the meaning of the word\n- PRESS the key for the colour of the letters:\n\nFor the color red = press "r"\nFor the color green = press "g"\nFor the color blue = press "b"\n\n"Press >SPACE< to start the experiment"',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -153,7 +153,7 @@ async function experimentInit() {
   Exit_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'Exit_text',
-    text: 'Please wait a few seconds while we safe your results.. ',
+    text: 'Please wait a few seconds while we save your results.. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
